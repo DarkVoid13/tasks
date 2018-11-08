@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-type animals struct {
+type Animals struct {
 	age    int
 	weight int
 	color  string
@@ -15,11 +15,11 @@ type inform interface {
 	Inf() string
 }
 
-func (a animals) Inf() string {
+func (a Animals) Inf() string {
 	return a.color
 }
 
-func (a animals) String() string {
+func (a Animals) String() string {
 	return fmt.Sprintf("%d %d %s", a.age, a.weight, a.color)
 }
 func informFunc(i inform) string {
@@ -27,9 +27,9 @@ func informFunc(i inform) string {
 }
 func main() {
 	array := [3]inform{
-		animals{12, 11, "blue"},
-		animals{11, 12, "blue"},
-		animals{12, 13, "blue"}}
+		Animals{12, 11, "blue"},
+		Animals{11, 12, "blue"},
+		Animals{12, 13, "blue"}}
 
 	for i := range array {
 		fmt.Println(i, " | ", array[i].Inf())
