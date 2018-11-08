@@ -5,14 +5,14 @@ import (
 	"fmt"
 )
 
-type animals struct {
+type Animals struct {
 	age    int
 	weight int
 	color  string
 }
 
 func main() {
-	array := []animals{
+	array := []Animals{
 		{12, 11, "blue"},
 		{11, 12, "blue"},
 		{12, 13, "blue"}}
